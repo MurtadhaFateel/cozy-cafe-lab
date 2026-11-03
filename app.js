@@ -22,3 +22,14 @@ quoteDay.textContent = 'Always start your mornings with a cup of Coffe then tack
 quoteDay.classList.add('featured')
 console.log(quoteDay)
 
+
+//Part 3: Replace the main photo
+const mainPhoto = document.querySelector('#main-photo')
+//Read image src + log it 
+console.log(mainPhoto.getAttribute('src'))
+//Change img src 
+mainPhoto.setAttribute('src', './assets/berry-cake.jpg')
+//Update image alt
+mainPhoto.setAttribute('alt', 'A berry cake served at the cafe')
+console.log(mainPhoto)
+
