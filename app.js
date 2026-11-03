@@ -16,20 +16,32 @@ highlightTitleEls.forEach((highlighttitleEL) => {
 })
 
 //Select Quote of the Day paragraph and store it in a variable using # since it is an ID in HTML
-const quoteDay = document.querySelector('#quote-of-the-day')
+const quoteDayEl = document.querySelector('#quote-of-the-day')
 //Update the quote of the day paragrapgh 
-quoteDay.textContent = 'Always start your mornings with a cup of Coffe then tackle the day!'
-quoteDay.classList.add('featured')
-console.log(quoteDay)
+quoteDayEl.textContent = 'Always start your mornings with a cup of Coffe then tackle the day!'
+//Add a class to the quote of the day element 
+quoteDayEl.classList.add('featured')
+console.log(quoteDayEl)
 
 
 //Part 3: Replace the main photo
-const mainPhoto = document.querySelector('#main-photo')
+const mainPhotoEl = document.querySelector('#main-photo')
 //Read image src + log it 
-console.log(mainPhoto.getAttribute('src'))
+console.log(mainPhotoEl.getAttribute('src'))
 //Change img src 
-mainPhoto.setAttribute('src', './assets/berry-cake.jpg')
+mainPhotoEl.setAttribute('src', './assets/berry-cake.jpg')
 //Update image alt
-mainPhoto.setAttribute('alt', 'A berry cake served at the cafe')
-console.log(mainPhoto)
+mainPhotoEl.setAttribute('alt', 'A berry cake served at the cafe')
+console.log(mainPhotoEl)
+
+//Part 4: Connect the background-colour button
+//Selecting button elemtn
+const buttonbackgroundColorEl = document.querySelector('#bg-color-btn')
+//Selecing the body element of button
+buttonbackgroundColorEl.querySelector('body')
+console.log(buttonbackgroundColorEl)
+//Function to change background color of button
+function handleBackgroundChange (buttonbackgroundColorEl){
+    buttonbackgroundColorEl.style.backgroundColor = 'lavender'
+}
 
