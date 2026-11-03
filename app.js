@@ -28,7 +28,7 @@ console.log(quoteDayEl)
 const mainPhotoEl = document.querySelector('#main-photo')
 //Read image src + log it 
 console.log(mainPhotoEl.getAttribute('src'))
-//Change img src 
+//Change img src | take note of this for comparison 
 mainPhotoEl.setAttribute('src', './assets/berry-cake.jpg')
 //Update image alt
 mainPhotoEl.setAttribute('alt', 'A berry cake served at the cafe')
@@ -36,12 +36,16 @@ console.log(mainPhotoEl)
 
 //Part 4: Connect the background-colour button
 //Selecting button elemtn
-const buttonbackgroundColorEl = document.querySelector('#bg-color-btn')
-//Selecing the body element of button
-buttonbackgroundColorEl.querySelector('body')
-console.log(buttonbackgroundColorEl)
-//Function to change background color of button
-function handleBackgroundChange (buttonbackgroundColorEl){
-    buttonbackgroundColorEl.style.backgroundColor = 'lavender'
+const bgColorbtnEL = document.querySelector('#bg-color-btn')
+//Selecing the body element 
+const bodyEl = document.querySelector('body')
+// console.log(bgColorbtnEL)
+
+//Function to change background color when clicking the button
+const handleBackgroundChange = () => {
+bodyEl.style.backgroundColor = 'lightsteelblue'
 }
+
+//Call the function
+handleBackgroundChange()
 
