@@ -35,17 +35,27 @@ mainPhotoEl.setAttribute('alt', 'A berry cake served at the cafe')
 console.log(mainPhotoEl)
 
 //Part 4: Connect the background-colour button
-//Selecting button elemtn
+//Selecting button element
 const bgColorbtnEL = document.querySelector('#bg-color-btn')
-//Selecing the body element 
+//Selecing the body element - cached
 const bodyEl = document.querySelector('body')
 // console.log(bgColorbtnEL)
 
+//color array 
+let colors = ['bisque', 'lightsteelblue', 'lavender']
+
+
 //Function to change background color when clicking the button
 const handleBackgroundChange = () => {
-bodyEl.style.backgroundColor = 'lightsteelblue'
+    //count random number with math but * 3 based on the number of colors 
+    let count = Math.floor(Math.random() * 3)
+    // bodyEl.style.backgroundColor = 'lightsteelblue'
+    bodyEl.style.backgroundColor = colors[count]
+    
 }
+//event listener to call the function + when click
+bgColorbtnEL.addEventListener('click', handleBackgroundChange)
 
-//Call the function
-handleBackgroundChange()
+// //Call the function
+// handleBackgroundChange()
 
